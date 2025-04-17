@@ -9,9 +9,9 @@ document.querySelector('.check').addEventListener('click', function () {
   {
     const guess = Number(document.querySelector('.guess').value);
     if (!guess) {
-      document.querySelector('.message').textContent = 'd5l raqam ya 3gl';
+      document.querySelector('.message').textContent = 'enter a number';
     } else if (guess === secert_number) {
-      document.querySelector('.message').textContent = '3ash ya 3gl';
+      document.querySelector('.message').textContent = '3ash ya dude correct';
 
       document.querySelector('.number').textContent = secert_number;
       if (highscore < score) {
@@ -21,22 +21,22 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.highscore').textContent = highscore;
       }
     } else if (guess > secert_number) {
-      document.querySelector('.message').textContent = 'ta7t ya 3ars';
+      document.querySelector('.message').textContent = 'lower';
       score--;
       document.querySelector('.score').textContent = score;
     } else if (guess < secert_number) {
-      document.querySelector('.message').textContent = 'a3la ya 3ars';
+      document.querySelector('.message').textContent = 'higher';
       score--;
       document.querySelector('.score').textContent = score;
     }
     if (score == 0) {
-      document.querySelector('.message').textContent = '5srt ya 3ars';
+      document.querySelector('.message').textContent = 'you lost';
       score == 0;
       document.querySelector('.score').textContent = score;
     }
 
     if (score < 0) {
-      document.querySelector('.message').textContent = '5srt ya 3ars';
+      document.querySelector('.message').textContent = 'you lost';
       score = 0;
       document.querySelector('.score').textContent = score;
     }
@@ -57,9 +57,9 @@ document.querySelector('.check').addEventListener('touchend', function (e) {
   e.preventDefault(); // Prevent default touch behavior
   const guess = Number(document.querySelector('.guess').value);
   if (!guess) {
-    document.querySelector('.message').textContent = 'd5l raqam ya 3gl';
+    document.querySelector('.message').textContent = 'enter a number';
   } else if (guess === secert_number) {
-    document.querySelector('.message').textContent = '3ash ya 3gl';
+    document.querySelector('.message').textContent = '3ash ya dude correct';
     document.querySelector('.number').textContent = secert_number;
     if (highscore < score) {
       highscore = score;
@@ -68,21 +68,21 @@ document.querySelector('.check').addEventListener('touchend', function (e) {
       document.querySelector('.highscore').textContent = highscore;
     }
   } else if (guess > secert_number) {
-    document.querySelector('.message').textContent = 'ta7t ya 3ars';
+    document.querySelector('.message').textContent = 'lower';
     score--;
     document.querySelector('.score').textContent = score;
   } else if (guess < secert_number) {
-    document.querySelector('.message').textContent = 'a3la ya 3ars';
+    document.querySelector('.message').textContent = 'higher';
     score--;
     document.querySelector('.score').textContent = score;
   }
   if (score == 0) {
-    document.querySelector('.message').textContent = '5srt ya 3ars';
+    document.querySelector('.message').textContent = 'you lost';
     score == 0;
     document.querySelector('.score').textContent = score;
   }
   if (score < 0) {
-    document.querySelector('.message').textContent = '5srt ya 3ars';
+    document.querySelector('.message').textContent = 'you lost';
     score = 0;
     document.querySelector('.score').textContent = score;
   }
