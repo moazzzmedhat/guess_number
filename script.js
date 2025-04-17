@@ -14,9 +14,13 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = '3ash ya 3gl';
 
       document.querySelector('.number').textContent = secert_number;
-      highscore = score;
-      document.querySelector('.highscore').textContent = highscore;
-    } else if (guess > secert_number) {
+      if (highscore < score) {
+        highscore = score;
+        document.querySelector('.highscore').textContent = highscore;
+      } else {
+        document.querySelector('.highscore').textContent = highscore;
+      }
+     else if (guess > secert_number) {
       document.querySelector('.message').textContent = 'ta7t ya 3ars';
       score--;
       document.querySelector('.score').textContent = score;
