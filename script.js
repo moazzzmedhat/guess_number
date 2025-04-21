@@ -32,6 +32,7 @@ document.querySelector('.check').addEventListener('click', function () {
     if (score == 0) {
       document.querySelector('.message').textContent = 'you lost';
       score == 0;
+      document.querySelector('body').style.backgroundColor = '#ff0000'
       document.querySelector('.score').textContent = score;
     }
 
@@ -80,6 +81,7 @@ document.querySelector('.check').addEventListener('touchend', function (e) {
   if (score == 0) {
     document.querySelector('.message').textContent = 'you lost';
     score == 0;
+    document.querySelector('body').style.backgroundColor = '#ff0000'
     document.querySelector('.score').textContent = score;
   }
   if (score < 0) {
