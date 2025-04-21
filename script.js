@@ -12,7 +12,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = 'enter a number';
     } else if (guess === secert_number) {
       document.querySelector('.message').textContent = '3ash ya dude correct';
-
+      document.querySelector('body').style.backgroundColor = '#60b347';
       document.querySelector('.number').textContent = secert_number;
       if (highscore < score) {
         highscore = score;
@@ -60,6 +60,7 @@ document.querySelector('.check').addEventListener('touchend', function (e) {
     document.querySelector('.message').textContent = 'enter a number';
   } else if (guess === secert_number) {
     document.querySelector('.message').textContent = '3ash ya dude correct';
+     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').textContent = secert_number;
     if (highscore < score) {
       highscore = score;
@@ -93,6 +94,7 @@ document.querySelector('.again').addEventListener('touchend', function (e) {
   score = 20;
   document.querySelector('.score').textContent = score;
   secert_number = Math.trunc(Math.random() * 20) + 1;
+   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').textContent = '?';
   document.querySelector('.message').textContent = 'start guessing';
 });
